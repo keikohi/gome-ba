@@ -28,7 +28,6 @@
 </template>
 
 <script>
-import Test from "./components/Test.vue";
 import Viz from "./components/viz.vue";
 import PackageTree from "./components/packageTree.vue";
 import Setting from "./components/setting.vue"
@@ -38,7 +37,6 @@ export default {
         return {};
     },
     components: {
-        Test,
         Viz,
         PackageTree,
         Setting

@@ -5,13 +5,6 @@
 </template>
 
 <script>
-                    // rankdir=LR
-                    // bgcolor ="#061A2B"
-                    // fontcolor = white
-                    // fontname = meiryo
-                    // fontsize =20
-                    // ranksep = 2
-                    // nodesep = 0.4
 import dot from 'graphlib-dot'
 import Graph from 'graphlib'
 import Digraph from '../dot/digraph'
@@ -20,116 +13,106 @@ export default {
         return {
             input: ``,
             originalInput: `
-   digraph " D: "  {
-                    rankdir=LR
-                    bgcolor ="#061A2B"
-                    fontcolor = white
-                    fontname = meiryo
-                    fontsize =20
-                    ranksep = 1.5
-                    nodesep = 0.3
-     subgraph "cluster_dev" {
-       subgraph "cluster_go" {
-         subgraph "cluster_gin-master" {
+         digraph "gin-master" {
+            rankdir=LR
+            bgcolor ="#061A2B"
+            fontcolor = white
+            fontname = meiryo
+            fontsize =20
+            ranksep = 1.5
+            nodesep = 0.3
            subgraph "cluster_gin-master" {
-             "D:\dev\go\gin-master\gin-master\auth.go" [label="auth.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\auth.go" [label="auth.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
              subgraph "cluster_binding" {
-               "D:\dev\go\gin-master\gin-master\binding\binding.go" [label="binding.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\binding_nomsgpack.go" [label="binding_nomsgpack.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\default_validator.go" [label="default_validator.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\form.go" [label="form.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\form_mapping.go" [label="form_mapping.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\header.go" [label="header.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\json.go" [label="json.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\msgpack.go" [label="msgpack.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\multipart_form_mapping.go" [label="multipart_form_mapping.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\protobuf.go" [label="protobuf.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\query.go" [label="query.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\\uri.go" [label="uri.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\\xml.go" [label="xml.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\binding\yaml.go" [label="yaml.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\binding.go" [label="binding.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\binding_nomsgpack.go" [label="binding_nomsgpack.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\default_validator.go" [label="default_validator.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\form.go" [label="form.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\form_mapping.go" [label="form_mapping.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\header.go" [label="header.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\json.go" [label="json.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\msgpack.go" [label="msgpack.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\multipart_form_mapping.go" [label="multipart_form_mapping.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\protobuf.go" [label="protobuf.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\query.go" [label="query.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\\uri.go" [label="uri.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\\xml.go" [label="xml.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\binding\yaml.go" [label="yaml.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
                label="binding" color="#3B9FED"
              }
-             "D:\dev\go\gin-master\gin-master\context.go" [label="context.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\context_appengine.go" [label="context_appengine.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\debug.go" [label="debug.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\deprecated.go" [label="deprecated.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\doc.go" [label="doc.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\errors.go" [label="errors.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\fs.go" [label="fs.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\gin.go" [label="gin.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\context.go" [label="context.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\context_appengine.go" [label="context_appengine.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\debug.go" [label="debug.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\deprecated.go" [label="deprecated.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\doc.go" [label="doc.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\errors.go" [label="errors.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\fs.go" [label="fs.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\gin.go" [label="gin.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
              subgraph "cluster_ginS" {
-               "D:\dev\go\gin-master\gin-master\ginS\gins.go" [label="gins.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\ginS\gins.go" [label="gins.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
                label="ginS" color="#3B9FED"
              }
              subgraph "cluster_internal" {
                subgraph "cluster_bytesconv" {
-                 "D:\dev\go\gin-master\gin-master\internal\bytesconv\bytesconv.go" [label="bytesconv.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+                 "gin-master\internal\bytesconv\bytesconv.go" [label="bytesconv.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
                  label="bytesconv" color="#3B9FED"
                }
                subgraph "cluster_json" {
-                 "D:\dev\go\gin-master\gin-master\internal\json\json.go" [label="json.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-                 "D:\dev\go\gin-master\gin-master\internal\json\jsoniter.go" [label="jsoniter.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+                 "gin-master\internal\json\json.go" [label="json.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+                 "gin-master\internal\json\jsoniter.go" [label="jsoniter.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
                  label="json" color="#3B9FED"
                }
                label="internal" color="#3B9FED"
              }
-             "D:\dev\go\gin-master\gin-master\logger.go" [label="logger.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\mode.go" [label="mode.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\path.go" [label="path.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\recovery.go" [label="recovery.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\logger.go" [label="logger.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\mode.go" [label="mode.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\path.go" [label="path.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\recovery.go" [label="recovery.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
              subgraph "cluster_render" {
-               "D:\dev\go\gin-master\gin-master\render\data.go" [label="data.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\render\html.go" [label="html.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\render\json.go" [label="json.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\render\msgpack.go" [label="msgpack.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\render\protobuf.go" [label="protobuf.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\render\reader.go" [label="reader.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\render\redirect.go" [label="redirect.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\render\render.go" [label="render.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\render\text.go" [label="text.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\render\\xml.go" [label="xml.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-               "D:\dev\go\gin-master\gin-master\render\yaml.go" [label="yaml.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\data.go" [label="data.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\html.go" [label="html.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\json.go" [label="json.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\msgpack.go" [label="msgpack.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\protobuf.go" [label="protobuf.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\reader.go" [label="reader.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\redirect.go" [label="redirect.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\render.go" [label="render.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\text.go" [label="text.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\\xml.go" [label="xml.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+               "gin-master\render\yaml.go" [label="yaml.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
                label="render" color="#3B9FED"
              }
-             "D:\dev\go\gin-master\gin-master\response_writer.go" [label="response_writer.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\routergroup.go" [label="routergroup.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\tree.go" [label="tree.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\\utils.go" [label="utils.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
-             "D:\dev\go\gin-master\gin-master\version.go" [label="version.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\response_writer.go" [label="response_writer.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\routergroup.go" [label="routergroup.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\tree.go" [label="tree.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\\utils.go" [label="utils.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
+             "gin-master\version.go" [label="version.go",penwidth=0.6, color="#395070", style=filled, fontcolor=white, fontsize=18, size=30, fontname=meiryo]
              label="gin-master" color="#3B9FED"
            }
+               "gin-master\auth.go" -> "gin-master\internal\bytesconv\bytesconv.go" [color=white, penwidth=0.4]
+            "gin-master\binding\form_mapping.go" -> "gin-master\internal\bytesconv\bytesconv.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\binding\binding.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\binding\binding_nomsgpack.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\data.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\html.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\json.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\msgpack.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\protobuf.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\reader.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\redirect.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\render.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\text.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\\xml.go" [color=white, penwidth=0.4]
+            "gin-master\context.go" -> "gin-master\render\yaml.go" [color=white, penwidth=0.4]
+            "gin-master\deprecated.go" -> "gin-master\binding\binding.go" [color=white, penwidth=0.4]
+            "gin-master\deprecated.go" -> "gin-master\binding\binding_nomsgpack.go" [color=white, penwidth=0.4]
+            "gin-master\gin.go" -> "gin-master\internal\bytesconv\bytesconv.go" [color=white, penwidth=0.4]
+            "gin-master\gin.go" -> "gin-master\render\html.go" [color=white, penwidth=0.4]
+            "gin-master\ginS\gins.go" -> "gin-master\gin.go" [color=white, penwidth=0.4]
+            "gin-master\ginS\gins.go" -> "gin-master\routergroup.go" [color=white, penwidth=0.4]
+            "gin-master\render\json.go" -> "gin-master\internal\bytesconv\bytesconv.go" [color=white, penwidth=0.4]
            label="gin-master" color="#3B9FED"
          }
-         label="go" color="#3B9FED"
-       }
-       label="dev" color="#3B9FED"
-     }
-    "D:\dev\go\gin-master\gin-master\auth.go" -> "D:\dev\go\gin-master\gin-master\internal\bytesconv\bytesconv.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\binding\form_mapping.go" -> "D:\dev\go\gin-master\gin-master\internal\bytesconv\bytesconv.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\binding\binding.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\binding\binding_nomsgpack.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\data.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\html.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\json.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\msgpack.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\protobuf.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\reader.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\redirect.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\render.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\text.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\\xml.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\context.go" -> "D:\dev\go\gin-master\gin-master\render\yaml.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\deprecated.go" -> "D:\dev\go\gin-master\gin-master\binding\binding.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\deprecated.go" -> "D:\dev\go\gin-master\gin-master\binding\binding_nomsgpack.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\gin.go" -> "D:\dev\go\gin-master\gin-master\internal\bytesconv\bytesconv.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\gin.go" -> "D:\dev\go\gin-master\gin-master\render\html.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\ginS\gins.go" -> "D:\dev\go\gin-master\gin-master\gin.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\ginS\gins.go" -> "D:\dev\go\gin-master\gin-master\routergroup.go" [color=white, penwidth=0.4]
-    "D:\dev\go\gin-master\gin-master\render\json.go" -> "D:\dev\go\gin-master\gin-master\internal\bytesconv\bytesconv.go" [color=white, penwidth=0.4]
-     label="D:" color="#3B9FED"
-   }
-
                 `,
             isMouseDown: false,
             preXPos: 0,
